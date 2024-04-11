@@ -10,7 +10,7 @@ public class APIService {
     private final APIRepository apiRepository;
     public int getResultMember(){
         Long temp = apiRepository.countBy();
-        int result = temp.intValue();
-        return result;
+        return temp.intValue();
+
     }
 }
