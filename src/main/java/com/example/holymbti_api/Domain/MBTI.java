@@ -5,6 +5,7 @@ package com.example.holymbti_api.Domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -16,9 +17,37 @@ public class MBTI {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long issue_id;
 
-    private String mbti_result;
+    @Column(name = "mbti_result")
+    private String mbtiResult;
 
+    @Column(name = "i_result")
+    private int iResult;
+
+    @Column(name = "e_result")
+    private int eResult;
+
+    @Column(name = "n_result")
+    private int nResult;
+
+    @Column(name = "s_result")
+    private int sResult;
+
+    @Column(name = "t_result")
+    private int tResult;
+
+    @Column(name = "f_result")
+    private int fResult;
+
+    @Column(name = "j_result")
+    private int jResult;
+
+    @Column(name = "p_result")
+    private int pResult;
+
+    @CreationTimestamp
+    @Column(name = "reg_dt")
     private Date reg_dt;
+
 
 
 }
