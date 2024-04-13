@@ -9,7 +9,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table(name = "mbti_issue")
+@Table(name = "MBTI_ISSUE")
 @Data
 public class MBTI {
     @Id
@@ -19,7 +19,6 @@ public class MBTI {
     private String mbti_result;
 
     private Date reg_dt;
-
 
 
 }

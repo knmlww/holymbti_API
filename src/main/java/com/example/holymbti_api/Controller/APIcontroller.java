@@ -16,12 +16,12 @@ public class APIcontroller {
 
 
 
-    @PostMapping(value="/test")
+    @PostMapping(value="/holymbti/test")
     public String getTestValue(){
         return "SERVER OK";
     }
 
-    @PostMapping(value="/getResultMember")
+    @PostMapping(value="/holymbti/getResultMember")
     public int getResultMember(){
         return apiService.getResultMember();
     }
