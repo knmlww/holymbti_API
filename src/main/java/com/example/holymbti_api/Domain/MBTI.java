@@ -17,6 +17,9 @@ public class MBTI {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long issue_id;
 
+    @Column(name = "issue_num")
+    private int issueNum;
+
     @Column(name = "mbti_result")
     private String mbtiResult;
 
@@ -43,6 +46,9 @@ public class MBTI {
 
     @Column(name = "p_result")
     private int pResult;
+
+    @Column(name = "img_name")
+    private String imgName;
 
     @CreationTimestamp
     @Column(name = "reg_dt")
