@@ -2,6 +2,7 @@ package com.example.holymbti_api.Repository;
 
 
 import com.example.holymbti_api.Domain.MBTI;
+import com.example.holymbti_api.Domain.MBTIDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,5 +16,7 @@ public interface APIRepository extends JpaRepository<MBTI,Long> {
     Long countBy();
 
     Long countByMbtiResult(String param);
+
+    MBTIDTO findByIssueNum(int issueNum);
 
 }

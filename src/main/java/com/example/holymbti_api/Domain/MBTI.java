@@ -15,7 +15,7 @@ import java.util.Date;
 public class MBTI {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long issue_id;
+    private long issueId;
 
     @Column(name = "issue_num")
     private int issueNum;
@@ -52,7 +52,9 @@ public class MBTI {
 
     @CreationTimestamp
     @Column(name = "reg_dt")
-    private Date reg_dt;
+    private Date regDt;
+
+    private int mbtiCount;
 
 
 

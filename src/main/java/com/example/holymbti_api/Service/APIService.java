@@ -1,6 +1,7 @@
 package com.example.holymbti_api.Service;
 
 import com.example.holymbti_api.Domain.MBTI;
+import com.example.holymbti_api.Domain.MBTIDTO;
 import com.example.holymbti_api.Repository.APIRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,9 +21,13 @@ public class APIService {
         return apiRepository.save(param);
     }
 
-    public int findMyMBTICount(@RequestBody MBTI paramMBTI) {
+    public int findMyMBTICount(@RequestBody MBTIDTO paramMBTI) {
         String param = paramMBTI.getMbtiResult();
         Long result = apiRepository.countByMbtiResult(param);
         return result.intValue();
+    }
+
+    public MBTIDTO selectMBTI(@RequestBody int issueNum) {
+        return apiRepository.findByIssueNum(issueNum);
     }
 }
