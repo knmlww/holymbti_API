@@ -38,8 +38,8 @@ public class APIcontroller {
         return apiService.findMyMBTICount(paramMBTI);
     }
 
-    @GetMapping(value="/searchResult")
-    public MBTIDTO searchResult(int search){
+    @GetMapping(value="/searchResult/{search}")
+    public MBTIDTO searchResult(@PathVariable("search") int search){
         int issueNum = search;
         MBTIDTO result = apiService.selectMBTI(issueNum);
         int mbtiCnt = apiService.findMyMBTICount(result);
