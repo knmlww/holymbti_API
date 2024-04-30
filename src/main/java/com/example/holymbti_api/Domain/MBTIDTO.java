@@ -1,15 +1,13 @@
 package com.example.holymbti_api.Domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
 @Data
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 public class MBTIDTO {
 
@@ -40,6 +38,24 @@ public class MBTIDTO {
     private Date regDt;
 
     private int mbtiCount;
+
+    private long typeId;
+
+    private String typeName;
+
+    private String typeDtlName;
+
+    private String typeImgUrl;
+
+    private String typePray;
+
+    private String typeCcmName;
+
+    private String typeCcmSinger;
+
+    private String typeCcmUrl;
+
+    private String typeCcmLyric;
 
     public long getIssueId() {
         return issueId;
@@ -151,5 +167,77 @@ public class MBTIDTO {
 
     public void setMbtiCount(int mbtiCount) {
         this.mbtiCount = mbtiCount;
+    }
+
+    public String getTypeCcmName() {
+        return typeCcmName;
+    }
+
+    public void setTypeCcmName(String typeCcmName) {
+        this.typeCcmName = typeCcmName;
+    }
+
+    public String getTypeCcmSinger() {
+        return typeCcmSinger;
+    }
+
+    public void setTypeCcmSinger(String typeCcmSinger) {
+        this.typeCcmSinger = typeCcmSinger;
+    }
+
+    public String getTypeCcmUrl() {
+        return typeCcmUrl;
+    }
+
+    public void setTypeCcmUrl(String typeCcmUrl) {
+        this.typeCcmUrl = typeCcmUrl;
+    }
+
+    public String getTypeCcmLyric() {
+        return typeCcmLyric;
+    }
+
+    public void setTypeCcmLyric(String typeCcmLyric) {
+        this.typeCcmLyric = typeCcmLyric;
+    }
+
+    public String getTypePray() {
+        return typePray;
+    }
+
+    public void setTypePray(String typePray) {
+        this.typePray = typePray;
+    }
+
+    public long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(long typeId) {
+        this.typeId = typeId;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getTypeDtlName() {
+        return typeDtlName;
+    }
+
+    public void setTypeDtlName(String typeDtlName) {
+        this.typeDtlName = typeDtlName;
+    }
+
+    public String getTypeImgUrl() {
+        return typeImgUrl;
+    }
+
+    public void setTypeImgUrl(String typeImgUrl) {
+        this.typeImgUrl = typeImgUrl;
     }
 }
