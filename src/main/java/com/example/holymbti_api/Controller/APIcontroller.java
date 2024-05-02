@@ -58,7 +58,7 @@ public class APIcontroller {
         resultDTO.setTypeCcmUrl(result.getTypeCcmUrl());
         resultDTO.setTypeCcmLyric(result.getTypeCcmLyric());
         resultDTO.setMbtiCount(mbtiCnt);
-        resultDTO.setTypeCcmImgUrl(result.getTypeCcmImageUrl());
+        resultDTO.setTypeCcmImgUrl(result.getTypeCcmImgUrl());
 
         return resultDTO;
     }
