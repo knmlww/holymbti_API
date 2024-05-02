@@ -57,6 +57,10 @@ public class MBTIDTO {
 
     private String typeCcmLyric;
 
+    private String typeCcmImgUrl;
+
+    private String typeThumbnailImage;
+
     public long getIssueId() {
         return issueId;
     }
@@ -239,5 +243,21 @@ public class MBTIDTO {
 
     public void setTypeImgUrl(String typeImgUrl) {
         this.typeImgUrl = typeImgUrl;
+    }
+
+    public String getTypeCcmImgUrl() {
+        return typeCcmImgUrl;
+    }
+
+    public void setTypeCcmImgUrl(String typeCcmImgUrl) {
+        this.typeCcmImgUrl = typeCcmImgUrl;
+    }
+
+    public String getTypeThumbnailImage() {
+        return typeThumbnailImage;
+    }
+
+    public void setTypeThumbnailImage(String typeThumbnailImage) {
+        this.typeThumbnailImage = typeThumbnailImage;
     }
 }
