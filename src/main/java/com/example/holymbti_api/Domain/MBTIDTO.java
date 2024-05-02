@@ -59,7 +59,7 @@ public class MBTIDTO {
 
     private String typeCcmImgUrl;
 
-    private String typeThumbnailImage;
+    private String typeThumbnailImageUrl;
 
     public long getIssueId() {
         return issueId;
@@ -254,10 +254,10 @@ public class MBTIDTO {
     }
 
     public String getTypeThumbnailImage() {
-        return typeThumbnailImage;
+        return typeThumbnailImageUrl;
     }
 
-    public void setTypeThumbnailImage(String typeThumbnailImage) {
-        this.typeThumbnailImage = typeThumbnailImage;
+    public void setTypeThumbnailImage(String typeThumbnailImageUrl) {
+        this.typeThumbnailImageUrl = typeThumbnailImageUrl;
     }
 }
