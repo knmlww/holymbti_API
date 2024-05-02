@@ -26,4 +26,10 @@ public class MBTI_BASS {
     private String typeCcmUrl;
 
     private String typeCcmLyric;
+
+    private String typeThumbnailImage;
+
+    private String typeThumbnailTitle;
+
+    private String typeThumbnailDesc;
 }

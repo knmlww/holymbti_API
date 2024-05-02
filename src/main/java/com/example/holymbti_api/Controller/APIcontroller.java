@@ -48,6 +48,7 @@ public class APIcontroller {
 
         int mbtiCnt = apiService.findMyMBTICount(result.getTypeName());
 
+        resultDTO.setIssueNum(issueNum);
         resultDTO.setTypeName(result.getTypeName());
         resultDTO.setTypeDtlName(result.getTypeDtlName());
         resultDTO.setTypeImgUrl(result.getTypeImgUrl());
