@@ -26,7 +26,7 @@ https://github.com/knmlww/swordofbible_API.git
 2. clone React repository [react repository](https://github.com/knmlww/swordofbible.git)
 
 ```bash
-https://github.com/knmlww/holymbti.git
+https://github.com/knmlww/swordofbible.git
 ```
 
 
