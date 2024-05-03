@@ -1,4 +1,4 @@
-# swordfor2024thsf 
+# swordofbible_API
  
 [전신갑주 입고 홀스 성회 가자!] 부제 : 나에게 필요한 말씀의 검은?
 
@@ -20,10 +20,10 @@
 1. clone repository
 
 ```bash
-https://github.com/knmlww/holymbti_API.git
+https://github.com/knmlww/swordofbible_API.git
 ```
 
-2. clone React repository [react repository](https://github.com/knmlww/holymbti)
+2. clone React repository [react repository](https://github.com/knmlww/swordofbible.git)
 
 ```bash
 https://github.com/knmlww/holymbti.git
