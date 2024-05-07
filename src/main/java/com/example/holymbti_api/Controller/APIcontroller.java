@@ -60,6 +60,7 @@ public class APIcontroller {
         resultDTO.setMbtiCount(mbtiCnt);
         resultDTO.setTypeCcmImgUrl(result.getTypeCcmImgUrl());
         resultDTO.setTypeThumbnailImageUrl(result.getTypeThumbnailImageUrl());
+        resultDTO.setTypeDesc(result.getTypeDesc());
 
         return resultDTO;
     }
