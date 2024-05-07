@@ -61,6 +61,8 @@ public class MBTIDTO {
 
     private String typeThumbnailImageUrl;
 
+    private String typeDesc;
+
     public long getIssueId() {
         return issueId;
     }
@@ -259,5 +261,21 @@ public class MBTIDTO {
 
     public void setTypeThumbnailImage(String typeThumbnailImageUrl) {
         this.typeThumbnailImageUrl = typeThumbnailImageUrl;
+    }
+
+    public String getTypeThumbnailImageUrl() {
+        return typeThumbnailImageUrl;
+    }
+
+    public void setTypeThumbnailImageUrl(String typeThumbnailImageUrl) {
+        this.typeThumbnailImageUrl = typeThumbnailImageUrl;
+    }
+
+    public String getTypeDesc() {
+        return typeDesc;
+    }
+
+    public void setTypeDesc(String typeDesc) {
+        this.typeDesc = typeDesc;
     }
 }
