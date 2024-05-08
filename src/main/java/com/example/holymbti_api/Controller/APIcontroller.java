@@ -32,7 +32,7 @@ public class APIcontroller {
     @PostMapping(value="/holymbti/insertResult")
     public MBTI insertResult(@RequestBody MBTI paramMBTI){
         int maxIssueNum = apiService.selectMaxIssueNum();
-        paramMBTI.setIssueNum(maxIssueNum+3);
+        paramMBTI.setIssueNum(maxIssueNum+1);
         return apiService.insertResult(paramMBTI);
     }
 
