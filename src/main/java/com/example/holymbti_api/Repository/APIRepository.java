@@ -25,4 +25,7 @@ public interface APIRepository extends JpaRepository<MBTI,Long> {
     @Query("SELECT TB_A FROM MBTI_BASS TB_A INNER JOIN MBTI TB_B ON TB_B.imgName = TB_A.typeDtlName  WHERE TB_B.issueNum = :issueNum")
     MBTI_BASS findByIssueNum(@Param("issueNum") int issueNum);
 
+    @Query("SELECT MAX(issueNum) FROM MBTI")
+    Long selectMaxIssueNum();
+
 }

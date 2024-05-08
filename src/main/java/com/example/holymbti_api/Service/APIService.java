@@ -30,5 +30,10 @@ public class APIService {
         return apiRepository.findByIssueNum(issueNum);
     }
 
+    public int selectMaxIssueNum(){
+        return apiRepository.selectMaxIssueNum().intValue();
+    }
+
+
 
 }
