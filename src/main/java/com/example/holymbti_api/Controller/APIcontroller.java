@@ -18,8 +18,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.Blob;
-import java.util.Base64;
 
 
 @RestController
@@ -66,12 +64,17 @@ public class APIcontroller {
         resultDTO.setIssueNum(issueNum);
         resultDTO.setTypeName(result.getTypeName());
         resultDTO.setTypeDtlName(result.getTypeDtlName());
+        resultDTO.setTypeImgUrl(result.getTypeImgUrl());
         resultDTO.setTypePray(result.getTypePray());
         resultDTO.setTypeCcmName(result.getTypeCcmName());
         resultDTO.setTypeCcmSinger(result.getTypeCcmSinger());
+        resultDTO.setTypeCcmUrl(result.getTypeCcmUrl());
         resultDTO.setTypeCcmLyric(result.getTypeCcmLyric());
         resultDTO.setMbtiCount(mbtiCnt);
         resultDTO.setTypeCcmImgUrl(result.getTypeCcmImgUrl());
+        resultDTO.setTypeThumbnailImageUrl(result.getTypeThumbnailImageUrl());
+        resultDTO.setTypeDesc(result.getTypeDesc());
+
         return resultDTO;
     }
 
@@ -80,7 +83,7 @@ public class APIcontroller {
     public ResponseEntity<ByteArrayResource> downloadFile(@RequestParam(value = "image") String image) {
 
         //  ex. image=https://board-example.s3.ap-northeast-2.amazonaws.com/2b8359b2-de59-4765-8da0-51f5d4e556c3.jpg
-       // image= "https://bucket-1l6y8l.s3.ap-northeast-2.amazonaws.com/ENTP1.jpg";
+        image= "https://bucket-1l6y8l.s3.ap-northeast-2.amazonaws.com/ENTP1.jpg";
         byte[] data = awsS3Util.downloadFile(image);
         ByteArrayResource resource = new ByteArrayResource(data);
         return ResponseEntity
