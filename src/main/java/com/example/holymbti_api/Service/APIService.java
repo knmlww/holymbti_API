@@ -26,14 +26,8 @@ public class APIService {
         return result.intValue();
     }
 
-    public MBTI_BASS selectMBTI(@RequestBody int issueNum) {
-        return apiRepository.findByIssueNum(issueNum);
+    public MBTI_BASS selectMBTI(@RequestBody int issueId) {
+        return apiRepository.findByIssueId(issueId);
     }
-
-    public int selectMaxIssueNum(){
-        return apiRepository.selectMaxIssueNum().intValue();
-    }
-
-
 
 }

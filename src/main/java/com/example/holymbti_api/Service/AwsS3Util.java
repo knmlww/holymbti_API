@@ -26,6 +26,7 @@ public class AwsS3Util {
 
     public byte[] downloadFile(String image) {
 
+
         String filename = image.substring(image.lastIndexOf('/') + 1);
 
         S3Object s3Object = s3Client.getObject(bucketName, filename);

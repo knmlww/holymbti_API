@@ -44,8 +44,6 @@ public class APIcontroller {
 
     @PostMapping(value="/holymbti/insertResult")
     public MBTI insertResult(@RequestBody MBTI paramMBTI){
-        int maxIssueNum = apiService.selectMaxIssueNum();
-        paramMBTI.setIssueNum(maxIssueNum+1);
         return apiService.insertResult(paramMBTI);
     }
 
@@ -57,23 +55,20 @@ public class APIcontroller {
     @GetMapping(value="/holymbti/searchResult/{search}")
     public MBTIDTO searchResult(@PathVariable("search") int search){
         MBTIDTO resultDTO = new MBTIDTO();
-        int issueNum = search;
+        int issueId = search;
 
-        MBTI_BASS result = apiService.selectMBTI(issueNum);
+        MBTI_BASS result = apiService.selectMBTI(issueId);
 
         int mbtiCnt = apiService.findMyMBTICount(result.getTypeName());
 
-        resultDTO.setIssueNum(issueNum);
         resultDTO.setTypeName(result.getTypeName());
         resultDTO.setTypeDtlName(result.getTypeDtlName());
-     //   resultDTO.setTypeImgUrl(result.getTypeImgUrl());
         resultDTO.setTypePray(result.getTypePray());
         resultDTO.setTypeCcmName(result.getTypeCcmName());
         resultDTO.setTypeCcmSinger(result.getTypeCcmSinger());
         resultDTO.setTypeCcmUrl(result.getTypeCcmUrl());
         resultDTO.setTypeCcmLyric(result.getTypeCcmLyric());
         resultDTO.setMbtiCount(mbtiCnt);
- //       resultDTO.setTypeCcmImgUrl(result.getTypeCcmImgUrl());
         resultDTO.setTypeThumbnailImageUrl(result.getTypeThumbnailImageUrl());
         resultDTO.setTypeDesc(result.getTypeDesc());
 
