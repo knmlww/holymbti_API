@@ -22,7 +22,10 @@ public interface APIRepository extends JpaRepository<MBTI,Long> {
     @Query("SELECT count(1) FROM MBTI WHERE mbtiResult = :param")
     Long countByMbtiResult(@Param("param") String param);
 
-    @Query("SELECT TB_A FROM MBTI_BASS TB_A INNER JOIN MBTI TB_B ON TB_B.imgName = TB_A.typeDtlName  WHERE TB_B.issueNum = :issueNum")
-    MBTI_BASS findByIssueNum(@Param("issueNum") int issueNum);
+    @Query("SELECT TB_A FROM MBTI_BASS TB_A INNER JOIN MBTI TB_B ON TB_B.imgName = TB_A.typeDtlName  WHERE TB_B.issueId = :issueId")
+    MBTI_BASS findByIssueId(@Param("issueId") int issueId);
+
+    @Query("SELECT MAX(issueNum) FROM MBTI")
+    Long selectMaxIssueNum();
 
 }
